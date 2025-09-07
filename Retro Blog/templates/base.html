@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+  
+  {% block title %}
+      Retro Newspaper Blog
+  {% endblock title %}
+  
+</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: "Times New Roman", serif;
+      background-color: #f5f5dc; /* Beige paper color */
+      color: #1a1a1a;
+    }
+    h1, h2, h3 {
+      font-family: Georgia, serif;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+  <!-- Header -->
+
+     <header class="border-b-4 border-black p-6 text-center">
+     <h1 class="text-5xl font-bold tracking-wider">📰 The Retro Times</h1>
+    <p class="italic text-lg mt-2">Bringing you stories in a vintage style</p>
+  </header>
+
+ 
+
+  <!-- Navigation -->
+  <nav class="border-b border-black bg-[#e6e2d3] text-center py-3 space-x-6 font-semibold">
+    <a href=" {% url 'post' %} " class="hover:underline">Posts</a>
+    <a href=" {% url 'worldpage' %}" class="hover:underline">World</a>
+    <a href="#" class="hover:underline">Technology</a>
+    <a href="#" class="hover:underline">Culture</a>
+    <a href="#" class="hover:underline">Contact</a>
+  </nav>
+
+
+      <!-- Content -->
+  <main class="flex-1 max-w-5xl mx-auto p-10 space-y-12">
+
+    <!-- Featured Post -->
+     
+    <article class="border-b border-black pb-6">
+      <h2 class="text-3xl font-bold mb-2">  {% block header %} The Golden Age of Print  {% endblock header %}</h2>
+        
+      <p class="text-gray-700 italic mb-4">By Editorial Desk | Jan 5, 2025</p>
+      <p class="leading-relaxed text-justify">
+        There was a time when the rustle of newspapers in the morning was as common as the smell of coffee.
+        Print media defined culture, politics, and society. In this article, we revisit the golden days of ink and paper...
+      </p>
+    </article>
+
+    <!-- More Posts -->
+    <div class="grid md:grid-cols-2 gap-10">
+
+      <article class="border border-black p-6 bg-[#fdfcf7] shadow-sm">
+        <h3 class="text-2xl font-bold mb-2">📜 Vintage Ads that Shaped an Era</h3>
+        <p class="text-sm text-gray-700 italic mb-2">By Retro Writer</p>
+        <p class="leading-relaxed text-justify">
+          Old advertisements weren’t just about selling; they told stories, shaped culture,
+          and reflected the aspirations of their time. From Coca-Cola posters to travel ads,
+          here’s a trip down memory lane.
+        </p>
+      </article>
+
+      <article class="border border-black p-6 bg-[#fdfcf7] shadow-sm">
+        <h3 class="text-2xl font-bold mb-2">🎞️ Cinema in the Black & White Era</h3>
+        <p class="text-sm text-gray-700 italic mb-2">By Classic Reviewer</p>
+        <p class="leading-relaxed text-justify">
+          Before color screens dazzled the world, cinema was black, white, and full of raw emotions.
+          Silent films, early talkies, and golden-era classics gave rise to unforgettable legends of the silver screen.
+        </p>
+      </article>
+
+      <article class="border border-black p-6 bg-[#fdfcf7] shadow-sm">
+        <h3 class="text-2xl font-bold mb-2">📻 The Radio Revolution</h3>
+        <p class="text-sm text-gray-700 italic mb-2">By Soundwave Historian</p>
+        <p class="leading-relaxed text-justify">
+          Radios weren’t just machines; they were windows into the world. Families gathered,
+          stories spread, and the voice of the world echoed through small speakers,
+          transforming homes into stages of imagination.
+        </p>
+      </article>
+
+      <article class="border border-black p-6 bg-[#fdfcf7] shadow-sm">
+        <h3 class="text-2xl font-bold mb-2">📚 Literature That Changed Generations</h3>
+        <p class="text-sm text-gray-700 italic mb-2">By Book Archivist</p>
+        <p class="leading-relaxed text-justify">
+          From Dickens to Hemingway, the written word has inspired revolutions, soothed souls,
+          and crafted entire worlds. This piece looks at literature that stood the test of time.
+        </p>
+      </article>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t-4 border-black text-center py-6 bg-[#e6e2d3] mt-10">
+    <p class="font-bold">&copy; 2025 The Retro Times | Designed in Newspaper Style 🖋️</p>
+    <div class="mt-2 text-sm">
+      <a href="#" class="hover:underline mx-2">Privacy Policy</a> |
+      <a href="#" class="hover:underline mx-2">Terms of Use</a> |
+      <a href="#" class="hover:underline mx-2">Archives</a>
+    </div>
+  </footer>
+
+
+
+
+</body>
+</html>
