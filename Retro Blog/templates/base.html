@@ -48,17 +48,19 @@
   <main class="flex-1 max-w-5xl mx-auto p-10 space-y-12">
 
     <!-- Featured Post -->
+     {% block content %}
      
+   
     <article class="border-b border-black pb-6">
       <h2 class="text-3xl font-bold mb-2">  {% block header %} The Golden Age of Print  {% endblock header %}</h2>
         
-      <p class="text-gray-700 italic mb-4">By Editorial Desk | Jan 5, 2025</p>
+      <p class="text-gray-700 italic mb-4"> By Editorial Desk | Jan 5, 2025</p>
       <p class="leading-relaxed text-justify">
         There was a time when the rustle of newspapers in the morning was as common as the smell of coffee.
         Print media defined culture, politics, and society. In this article, we revisit the golden days of ink and paper...
       </p>
     </article>
-
+  {% endblock content %}
     <!-- More Posts -->
     <div class="grid md:grid-cols-2 gap-10">
 
