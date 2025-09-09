@@ -35,12 +35,11 @@
  
 
   <!-- Navigation -->
-  <nav class="border-b border-black bg-[#e6e2d3] text-center py-3 space-x-6 font-semibold">
-    <a href=" {% url 'post' %} " class="hover:underline">Posts</a>
-    <a href=" {% url 'worldpage' %}" class="hover:underline">World</a>
-    <a href="#" class="hover:underline">Technology</a>
-    <a href="#" class="hover:underline">Culture</a>
-    <a href="#" class="hover:underline">Contact</a>
+  <nav class="border-b border-black bg-[#e6e2d3] text-center py-3 space-x-6 gap-4 font-semibold">
+    {% block menu %}
+      <a href=" {% url 'post' %} " class="hover:underline">Posts</a>
+    {% endblock menu %}
+    
   </nav>
 
 
