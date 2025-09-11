@@ -10,3 +10,19 @@
             {{cat.category_name}}
      {% endfor %}
  {% endblock menu %}
+
+
+  {% block posts %}
+    {% for post in featured_post  %}
+         <div class="grid md:grid-cols-2 gap-10">
+
+      <article class="border border-black p-6 bg-[#fdfcf7] shadow-sm">
+        <h3 class="text-2xl font-bold mb-2">📜{{post.title}} </h3>
+        <p class="text-sm text-gray-700 italic mb-2"> By {{post.author}} </p>
+        <div class="h-4, w-4"> {{post.blog_image}} </div>
+        <p class="leading-relaxed text-justify">
+          {{post.blog_body}}
+        </p>
+      </article>
+    {% endfor %}
+  {% endblock posts %}
